@@ -16,6 +16,7 @@
             <input type="text" id="name" name="taskName" placeholder="Enter Your Task....">
             <button name="addBtn">Add</button><br/>
         </div>
+        <div><a href="./read.php">Read</a></div>
         
     </form>
 
@@ -32,7 +33,7 @@
         }else{
             $sql = "INSERT INTO work (name) VALUES ('$taskName')";
             if(mysqli_query($conn,$sql)){
-                echo "Insert Success .....";
+                header("location:read.php");
             }else{
                 echo "Query Fail..." . mysqli_error($conn);
             }

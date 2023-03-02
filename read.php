@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Task List</h1>
+    <a href="./create.php">Create</a>
 
     <table border="1">
         <thead>
@@ -32,8 +33,8 @@
                             <td>{$row['name']}</td>
                             <td>$time</td> 
                             <td> 
-                                <a href='#'>Update</a>
-                                <a href='#'>Delete</a>
+                                <a href='./update.php?id={$row['id']}'>Update</a>
+                                <a href='./delete.php?id={$row['id']}'>Delete</a>
                             </td>
                         </tr>
                     ";
